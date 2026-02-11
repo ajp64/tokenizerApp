@@ -18,9 +18,9 @@ mvn spring-boot:run
 ```
 and access the app by making POST requests to the respective endpoints 
 
-[http://localhost:3000/tokenize](http://localhost:3000/tokenize)
+`http://localhost:3000/tokenize`
 
-[http://localhost:3000/detokenize](http://localhost:3000/detokenize)
+`http://localhost:3000/detokenize`
 
 The app uses H2 as an in-memory data store, and can be accessed via:
 
@@ -30,7 +30,7 @@ The app uses H2 as an in-memory data store, and can be accessed via:
 
 # Walkthrough
 
-When the app is running, the user can make a POST request to http://localhost:3000/tokenize with an array of strings in an accountNumbers object. An example curl request is:
+When the app is running, the user can make a POST request to `http://localhost:3000/tokenize` with an array of strings in an accountNumbers object. An example curl request is:
 
 ```bash
 curl -X POST http://localhost:3000/tokenize \
@@ -44,7 +44,7 @@ curl -X POST http://localhost:3000/tokenize \
   }'
 ```
 
-The user will receive a response containing the tokenized response numbers. If the user makes a POST request to http://localhost:3000/detokenize with any token values stored in the database, they will receive a response with the corresponding raw account numbers. An example curl request for this endpoint is:
+The user will receive a response containing the tokenized response numbers. If the user makes a POST request to `http://localhost:3000/detokenize` with any token values stored in the database, they will receive a response with the corresponding raw account numbers. An example curl request for this endpoint is:
 
 ```bash
 curl -X POST http://localhost:3000/detokenize \
