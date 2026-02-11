@@ -4,6 +4,9 @@ import com.demo.tokenizer.Model.AccountEntity;
 import com.demo.tokenizer.Model.RawAccounts;
 import com.demo.tokenizer.Model.TokenizedAccounts;
 import com.demo.tokenizer.Repository.TokenizedAccountRepository;
+import org.springframework.security.crypto.encrypt.Encryptors;
+import org.springframework.security.crypto.encrypt.TextEncryptor;
+import org.springframework.security.crypto.keygen.KeyGenerators;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -13,9 +16,12 @@ import java.util.stream.Collectors;
 public class TokenizingService {
 
     private final TokenizedAccountRepository repository;
+    private final TextEncryptor encryptor;
+    private final String salt = KeyGenerators.string().generateKey();
 
     public TokenizingService(TokenizedAccountRepository repository)
     {
+        this.encryptor = Encryptors.text("password123", salt);
         this.repository = repository;
     }
 
@@ -56,7 +62,7 @@ public class TokenizingService {
     private void createAndStoreAccountEntity(String rawAccountNumber){
         AccountEntity entity = new AccountEntity();
         entity.setRawAccountNumber(rawAccountNumber);
-        entity.setTokenizedAccountNumber(rawAccountNumber + "salt");
+        entity.setTokenizedAccountNumber(encryptor.encrypt(rawAccountNumber));
         repository.save(entity);
     }
 
