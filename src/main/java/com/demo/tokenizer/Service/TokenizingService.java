@@ -4,6 +4,8 @@ import com.demo.tokenizer.Model.AccountEntity;
 import com.demo.tokenizer.Model.RawAccounts;
 import com.demo.tokenizer.Model.TokenizedAccounts;
 import com.demo.tokenizer.Repository.TokenizedAccountRepository;
+import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,13 @@ public class TokenizingService {
     }
 
     public TokenizedAccounts tokenize(RawAccounts rawAccounts) {
+        Set<AccountEntity> existingAccounts =
+                repository.findAllByRawAccountNumberIn(rawAccounts.getAccountNumbers());
+
+        if (!existingAccounts.isEmpty()) {
+            throw new EntityExistsException("Some provided accounts already exist.");
+        }
+
         rawAccounts.getAccountNumbers().forEach(this::createAndStoreAccountEntity);
 
         Set<AccountEntity> createdAccounts =
@@ -44,6 +53,10 @@ public class TokenizingService {
 
         Set<AccountEntity> fetchedAccountNumbers =
                 repository.findAllByTokenizedAccountNumberIn(tokenizedNumbers);
+
+        if (fetchedAccountNumbers.size() != tokenizedNumbers.size()) {
+            throw new EntityNotFoundException("Some account numbers were not found.");
+        }
 
         Set<String> detokenizedAccountNumbers =
                 fetchedAccountNumbers.stream()
