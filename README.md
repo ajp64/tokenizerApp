@@ -18,13 +18,13 @@ mvn spring-boot:run
 ```
 and access the app by making POST requests to the respective endpoints 
 
-[http://localhost:3000/tokenize](http://localhost:3000/tokenize):
+[http://localhost:3000/tokenize](http://localhost:3000/tokenize)
 
-[http://localhost:3000/detokenize](http://localhost:3000/detokenize):
+[http://localhost:3000/detokenize](http://localhost:3000/detokenize)
 
 The app uses H2 as an in-memory data store, and can be accessed via:
 
-[http://localhost:3000/h2-console/](http://localhost:3000/h2-console/):
+[http://localhost:3000/h2-console/](http://localhost:3000/h2-console/)
 
 (username: sa, no password)
 
