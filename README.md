@@ -57,7 +57,7 @@ curl -X POST http://localhost:3000/detokenize \
     ]
   }'
 ```
-Note that errors will be thrown if the user tries to POST existing account numbers to the `/tokenise` endpoint, or sends tokens that don’t exist to the `/detokenise` endpoint. An internal error will be received in the response, and an error message is logged in the app. 
+Note that errors will be thrown if the user tries to POST existing account numbers to the `/tokenise` endpoint, or sends tokens that don’t exist to the `/detokenise` endpoint. An BAD_REQUEST code will be received in the response, with a basic error message as the body. 
 
 
 
