@@ -4,9 +4,7 @@ import com.demo.tokenizer.Model.AccountEntity;
 import com.demo.tokenizer.Model.RawAccounts;
 import com.demo.tokenizer.Model.TokenizedAccounts;
 import com.demo.tokenizer.Repository.TokenizedAccountRepository;
-import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
-import org.springframework.security.crypto.keygen.KeyGenerators;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -17,12 +15,11 @@ public class TokenizingService {
 
     private final TokenizedAccountRepository repository;
     private final TextEncryptor encryptor;
-    private final String salt = KeyGenerators.string().generateKey();
 
-    public TokenizingService(TokenizedAccountRepository repository)
+    public TokenizingService(TokenizedAccountRepository repository, TextEncryptor encryptor)
     {
-        this.encryptor = Encryptors.text("password123", salt);
         this.repository = repository;
+        this.encryptor = encryptor;
     }
 
     public TokenizedAccounts tokenize(RawAccounts rawAccounts) {
