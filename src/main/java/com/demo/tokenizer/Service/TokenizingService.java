@@ -6,6 +6,7 @@ import com.demo.tokenizer.Model.TokenizedAccounts;
 import com.demo.tokenizer.Repository.TokenizedAccountRepository;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class TokenizingService {
 
     private final TokenizedAccountRepository repository;
