@@ -9,8 +9,9 @@ Clone the repo by copying the url from GitHub, and using the following commands:
 `cd <project_folder>`
 
 When in the project folder, run this command using Maven:
-
-`./mvnw clean verify`
+```bash
+./mvnw clean verify
+```
 
 If successful, you should be able to run the app using the following command:
 ```bash
