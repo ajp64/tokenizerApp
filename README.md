@@ -1,20 +1,20 @@
 # Running the code
 Clone the repo and build locally. You will need installed:
  - Java 17
- - Maven (I'm using 3.9.6)
+ - Maven
 
 Clone the repo by copying the url from GitHub, and using the following commands:
 
 `git clone <repo_url>`  
 `cd <project_folder>`
 
-When in the project folder, install using Maven:
+When in the project folder, run this command using Maven:
 
-`mvn clean install`
+`./mvnw clean verify`
 
 If successful, you should be able to run the app using the following command:
 ```bash
-mvn spring-boot:run
+java -jar target/tokenizerApp*.jar
 ```
 and access the app by making POST requests to the respective endpoints 
 
@@ -26,7 +26,7 @@ The app uses H2 as an in-memory data store, and can be accessed via:
 
 [http://localhost:3000/h2-console/](http://localhost:3000/h2-console/)
 
-(username: sa, no password)
+(username: sa, no password, JDBC URL: jdbc:h2:mem:testdb)
 
 # Walkthrough
 
