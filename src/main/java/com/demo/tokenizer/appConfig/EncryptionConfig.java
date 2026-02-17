@@ -1,4 +1,4 @@
-package com.demo.tokenizer.AppConfig;
+package com.demo.tokenizer.appConfig;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

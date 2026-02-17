@@ -1,7 +1,7 @@
-package com.demo.tokenizer.RepositoryTests;
+package com.demo.tokenizer.repositoryTests;
 
-import com.demo.tokenizer.Model.AccountEntity;
-import com.demo.tokenizer.Repository.TokenizedAccountRepository;
+import com.demo.tokenizer.model.AccountEntity;
+import com.demo.tokenizer.repository.TokenizedAccountRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

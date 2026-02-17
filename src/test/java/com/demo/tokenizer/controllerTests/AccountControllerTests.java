@@ -1,9 +1,9 @@
-package com.demo.tokenizer.ControllerTests;
+package com.demo.tokenizer.controllerTests;
 
-import com.demo.tokenizer.Controller.AccountController;
-import com.demo.tokenizer.Model.RawAccounts;
-import com.demo.tokenizer.Model.TokenizedAccounts;
-import com.demo.tokenizer.Service.TokenizingService;
+import com.demo.tokenizer.controller.AccountController;
+import com.demo.tokenizer.model.RawAccounts;
+import com.demo.tokenizer.model.TokenizedAccounts;
+import com.demo.tokenizer.service.TokenizingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

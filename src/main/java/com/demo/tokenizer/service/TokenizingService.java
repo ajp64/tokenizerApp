@@ -1,9 +1,9 @@
-package com.demo.tokenizer.Service;
+package com.demo.tokenizer.service;
 
-import com.demo.tokenizer.Model.AccountEntity;
-import com.demo.tokenizer.Model.RawAccounts;
-import com.demo.tokenizer.Model.TokenizedAccounts;
-import com.demo.tokenizer.Repository.TokenizedAccountRepository;
+import com.demo.tokenizer.model.AccountEntity;
+import com.demo.tokenizer.model.RawAccounts;
+import com.demo.tokenizer.model.TokenizedAccounts;
+import com.demo.tokenizer.repository.TokenizedAccountRepository;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;

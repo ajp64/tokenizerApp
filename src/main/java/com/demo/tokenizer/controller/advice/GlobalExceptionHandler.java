@@ -1,4 +1,4 @@
-package com.demo.tokenizer.Controller.advice;
+package com.demo.tokenizer.controller.advice;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;

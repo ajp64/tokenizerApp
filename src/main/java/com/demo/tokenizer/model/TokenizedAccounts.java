@@ -1,4 +1,4 @@
-package com.demo.tokenizer.Model;
+package com.demo.tokenizer.model;
 
 import java.util.Set;
 public class TokenizedAccounts {

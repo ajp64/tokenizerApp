@@ -1,8 +1,8 @@
-package com.demo.tokenizer.Controller;
+package com.demo.tokenizer.controller;
 
-import com.demo.tokenizer.Model.RawAccounts;
-import com.demo.tokenizer.Model.TokenizedAccounts;
-import com.demo.tokenizer.Service.TokenizingService;
+import com.demo.tokenizer.model.RawAccounts;
+import com.demo.tokenizer.model.TokenizedAccounts;
+import com.demo.tokenizer.service.TokenizingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

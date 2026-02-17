@@ -1,6 +1,6 @@
-package com.demo.tokenizer.ControllerTests;
+package com.demo.tokenizer.controllerTests;
 
-import com.demo.tokenizer.Controller.advice.GlobalExceptionHandler;
+import com.demo.tokenizer.controller.advice.GlobalExceptionHandler;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.Test;

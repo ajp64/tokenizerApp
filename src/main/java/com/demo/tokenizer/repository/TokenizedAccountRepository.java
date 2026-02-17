@@ -1,6 +1,6 @@
-package com.demo.tokenizer.Repository;
+package com.demo.tokenizer.repository;
 
-import com.demo.tokenizer.Model.AccountEntity;
+import com.demo.tokenizer.model.AccountEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

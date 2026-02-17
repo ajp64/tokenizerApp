@@ -1,10 +1,10 @@
-package com.demo.tokenizer.ServiceTests;
+package com.demo.tokenizer.serviceTests;
 
-import com.demo.tokenizer.Model.RawAccounts;
-import com.demo.tokenizer.Model.AccountEntity;
-import com.demo.tokenizer.Model.TokenizedAccounts;
-import com.demo.tokenizer.Repository.TokenizedAccountRepository;
-import com.demo.tokenizer.Service.TokenizingService;
+import com.demo.tokenizer.model.RawAccounts;
+import com.demo.tokenizer.model.AccountEntity;
+import com.demo.tokenizer.model.TokenizedAccounts;
+import com.demo.tokenizer.repository.TokenizedAccountRepository;
+import com.demo.tokenizer.service.TokenizingService;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;

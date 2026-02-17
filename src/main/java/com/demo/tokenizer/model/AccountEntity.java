@@ -1,4 +1,4 @@
-package com.demo.tokenizer.Model;
+package com.demo.tokenizer.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
